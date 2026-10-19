@@ -8,7 +8,7 @@ https://sajjadursohag.github.io/Music_Player/
 
 ## 📸 Screenshot
 
-![SoundWave Music Player](screenshots/music_player.png)
+![SoundWave Music Player](screeshots/music_player.png)
 
 ## ✨ Features
 
