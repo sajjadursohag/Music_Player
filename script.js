@@ -29,6 +29,11 @@ const songs = [
     artist: "Artist Three",
     src: "songs/song-3.mp3",
   },
+  {
+    title: "Surah Rahman",
+    artist: "Artist Three",
+    src: "songs/Surah_Rahman.mp3",
+  },
 ];
 
 let currentSongIndex = 0;
