@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #f8fafc;
+  background: #0b1020;
+  font-synthesis: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 15% 15%, #45246d 0, transparent 40%),
+    radial-gradient(ellipse at 90% 85%, #124b54 0, transparent 35%),
+    #0b1020;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.player {
+  width: min(100%, 380px);
+  padding: 24px;
+  border: 1px solid #ffffff16;
+  border-radius: 28px;
+  background: #111a2beF;
+  box-shadow: 0 28px 80px #0008;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand span {
+  color: #c6a0ff;
+  font-size: 25px;
+  vertical-align: -2px;
+}
+
+.status {
+  color: #8390a9;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.cover {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 40%, #bd8cff, transparent 22%),
+    radial-gradient(circle at 25% 70%, #ff8bba, transparent 28%),
+    radial-gradient(circle at 80% 75%, #438ff4, transparent 35%),
+    linear-gradient(140deg, #251848, #0d3445);
+}
+
+.cover::before,
+.cover::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  aspect-ratio: 1;
+  border: 1px solid #ffffff40;
+  border-radius: 50%;
+}
+
+.cover::after {
+  width: 55%;
+}
+
+.cover-circle {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ffffff60;
+  border-radius: 50%;
+  background: #ffffff16;
+  color: #fff;
+  font-size: 54px;
+  backdrop-filter: blur(10px);
+}
+
+.cover-label {
+  position: absolute;
+  bottom: 18px;
+  color: #ffffffba;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.track-text {
+  min-width: 0;
+}
+
+.track-text h1 {
+  overflow: hidden;
+  font-size: 21px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track-text p {
+  margin-top: 7px;
+  color: #929fb6;
+  font-size: 13px;
+}
+
+.music-note {
+  color: #c6a0ff;
+  font-size: 28px;
+}
+
+.progress-section input,
+.volume-section input {
+  width: 100%;
+  accent-color: #c6a0ff;
+  cursor: pointer;
+}
+
+.progress-section input {
+  display: block;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+  color: #8d9ab0;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 27px 0;
+}
+
+.controls button {
+  display: grid;
+  place-items: center;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.08);
+}
+
+.secondary-control {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff0c;
+  color: #e3e8f4;
+  font-size: 15px;
+}
+
+.play-button {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0c3ff, #a879f7);
+  color: #201139;
+  font-size: 23px;
+  box-shadow: 0 7px 25px #ac7af740;
+}
+
+.volume-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #9ba7bb;
+  font-size: 14px;
+}
+
+.player-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 17px;
+  border-top: 1px solid #ffffff12;
+  color: #8592a8;
+  font-size: 9px;
+  letter-spacing: 0.6px;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  vertical-align: 1px;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #c6a0ff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 420px) {
+  .player {
+    padding: 18px;
+  }
+
+  .controls {
+    gap: 24px;
+  }
+
+  .cover-circle {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

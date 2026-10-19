@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern music player built with HTML, CSS and JavaScript." />
+  <title>SoundWave | Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="player">
+    <header class="topbar">
+      <a href="#" class="brand"><span>♫</span> SoundWave</a>
+      <span class="status">YOUR MUSIC SPACE</span>
+    </header>
+
+    <section class="cover" id="cover">
+      <div class="cover-circle">♫</div>
+      <span class="cover-label">NOW PLAYING</span>
+    </section>
+
+    <section class="track-info">
+      <div class="track-text">
+        <h1 id="song-title">Midnight Dreams</h1>
+        <p id="song-artist">SoundWave Artist</p>
+      </div>
+      <span class="music-note">♪</span>
+    </section>
+
+    <audio id="audio"></audio>
+
+    <section class="progress-section">
+      <input
+        id="progress"
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        step="0.1"
+        aria-label="Seek through song"
+      />
+      <div class="time-row">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="Playback controls">
+      <button id="prev" class="secondary-control" aria-label="Previous song">|◀</button>
+      <button id="play" class="play-button" aria-label="Play music">▶</button>
+      <button id="next" class="secondary-control" aria-label="Next song">▶|</button>
+    </section>
+
+    <section class="volume-section">
+      <span aria-hidden="true">🔈</span>
+      <input
+        id="volume"
+        type="range"
+        min="0"
+        max="1"
+        value="0.7"
+        step="0.01"
+        aria-label="Volume"
+      />
+      <span aria-hidden="true">🔊</span>
+    </section>
+
+    <footer class="player-footer">
+      <span><span class="live-dot"></span> Ready to play</span>
+      <span id="track-count">TRACK 01 / 03</span>
+    </footer>
+  </main>
+</body>
+</html>
